@@ -5,19 +5,28 @@
     <meta name="Generator" content="FreshHTML v3.69"></meta>
   </head>
   <body>
+    <strong>
+      <font size="5">Synology configuration for Trasmission</font>
+    </strong>
+    <br><br>
     <strong></strong>
     If you have issues installing the package from the Package Center and get an error
-    saying port 9091 is in use, do the following:<br><em>sudo servicetool --remove-configure-file
-    --package transmission.sc</em><br>Then try to reinstall. If you get another error,
-    then do the following:<br><em>sudo rm /usr/local/etc/services.d/transmission.sc<br>
-    </em>The application should install and update appropriately.<br><br>The configuration
-    location for the Transmission settings.json file is located here:<br><em><a>/volume1/@appdata/transmission/settings.json</a><br>
-    </em>There is another location, but this is NOT the correct location: <a>/volume1/@appstore/transmission/var/settings.json</a><br>This
+    saying port 9091 is in use, do the following:<br><em></em>
+    <strong></strong>
+    <br>Then try to reinstall. If you get another error, then do the following:<br><em></em>
+    <strong></strong>
+    <br>The application should install and update appropriately.<br><br>The configuration
+    location for the Transmission settings.json file is located here:<br><em><a></a></em>
+    <strong></strong>
+    <br>There is another location, but this is NOT the correct location: <a>/volume1/@appstore/transmission/var/settings.json</a><br>This
     location is just the original file which is not modified.<br>To make changes to
-    the correct file, you need to edit <em><a>/volume1/@appdata/transmission/settings.json</a><br>
-    </em>I use vi to edit the files, but others use nano.<br><em>sudo vi <a>/volume1/@appdata/transmission/settings.json</a><br>
-    <br>
-    </em>
+    the correct file, you need to edit <em><a></a></em>
+    <strong></strong>
+    <br>I use vi to edit the files, but others use nano.<br><em></em>
+    <strong></strong>
+    <a></a>
+    <strong></strong>
+    <br><br>
     <strong>
       <font color="red">*** A word of note, make sure you STOP the service before making
       changes to the settings.json file. ***</font>
@@ -33,10 +42,11 @@
     and then another underscore. __PKG_<br>I bet this is why I was getting permissions
     issues, but who knows, this is a very odd group which Tranmission created. The good
     news is Transmission works.<br><br>For a bonus you can run the following comand
-    to update the web UI to give you slighly more options.<br><em>sudo wget https://github.com/ronggang/transmission-web-control/raw/master/release/install-tr-control.sh
-    --no-check-certificate</em><br><em>sudo bash install-tr-control.sh <br>
-    <br>
-    </em>You will now have a newer updated UI and if you want to change back you have
-    the option to revert
+    to update the web UI to give you slighly more options.<br><em></em>
+    <strong></strong>
+    <br><em></em>
+    <strong></strong>
+    <br><br>You will now have a newer updated UI and if you want to change back you
+    have the option to revert 
   </body>
 </html>
