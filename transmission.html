@@ -8,18 +8,17 @@
     <strong>
       <font size="5">Synology configuration for Transmission</font>
     </strong>
-    <br><br>
-    <strong></strong>
-    If you have issues installing the package from the Package Center and get an error
-    saying port 9091 is in use, do the following:<br><em>sudo servicetool --remove-configure-file
-    --package transmission.sc</em><br>Then try to reinstall. If you get another error,
-    then do the following:<br><em>sudo rm /usr/local/etc/services.d/transmission.sc<br>
+    <br><br>If you have issues installing the package from the Package Center and get
+    an error saying port 9091 is in use, do the following by SSHing into your Synology
+    NAS.<br><em>sudo servicetool --remove-configure-file --package transmission.sc</em><br>Then
+    try to reinstall. If you get another error, then do the following:<br><em>sudo rm
+    /usr/local/etc/services.d/transmission.sc<br>
     </em>The application should install and update appropriately.<br><br>The configuration
-    location for the Transmission settings.json file is located here:<br><em><a>/volume1/@appdata/transmission/settings.json</a><br>
+    location for the Transmission settings.json file is located here:<br><em><a><b>/volume1/@appdata/transmission/settings.json</b></a><br>
     </em>There is another location, but this is NOT the correct location: <a>/volume1/@appstore/transmission/var/settings.json</a><br>This
     location is just the original file which is not modified.<br>To make changes to
-    the correct file, you need to edit <em><a>/volume1/@appdata/transmission/settings.json</a><br>
-    </em>I use vi to edit the files, but others use nano.<br><em>sudo vi <a>/volume1/@appdata/transmission/settings.json</a><br>
+    the correct file, you need to edit <em><a><b>/volume1/@appdata/transmission/settings.json</b></a><br>
+    </em>I use vi to edit the files, but others use nano.<br><em><b>sudo vi <a>/volume1/@appdata/transmission/settings.json</a></b><br>
     <br>
     </em>
     <strong>
@@ -33,12 +32,12 @@
     had issues.<br><br>I was having permission issues using docker and I think I know
     why.<br>When I installed Transmission from the Synology Package center it renamed
     some of my accounts.<br>I had created a sc-transmission group. The package installer
-    renamed it to sc-transmission__PKG_<br>Notice it has two underscores __ then PKG
-    and then another underscore. __PKG_<br>I bet this is why I was getting permissions
+    renamed it to <b>sc-transmission__PKG_</b><br>Notice it has two underscores __ then
+    PKG and then another underscore. __PKG_<br>I bet this is why I was getting permissions
     issues, but who knows, this is a very odd group which Tranmission created. The good
     news is Transmission works.<br><br>For a bonus you can run the following comand
-    to update the web UI to give you slighly more options.<br><em>sudo wget https://github.com/ronggang/transmission-web-control/raw/master/release/install-tr-control.sh
-    --no-check-certificate</em><br><em>sudo bash install-tr-control.sh <br>
+    to update the web UI to give you slighly more options.<br><em><b>sudo wget https://github.com/ronggang/transmission-web-control/raw/master/release/install-tr-control.sh
+    --no-check-certificate</b></em><br><em><b>sudo bash install-tr-control.sh</b> <br>
     <br>
     </em>You will now have a newer updated UI and if you want to change back you have
     the option to revert 
