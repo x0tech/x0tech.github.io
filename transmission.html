@@ -22,21 +22,30 @@
     <br>
     </em>
     <strong>
-      <font color="red">*** A word of note, make sure you STOP the service before making
-      changes to the settings.json file. ***</font>
+      <font color="#ff0000">*** A word of note, make sure you STOP the service before
+      making changes to the settings.json file. ***</font><br>
     </strong>
-    <br>If Tranmission is runnining, the file will change and possibly override your
-    settings. Do the following to make sure your settings are saved.<br>1. Stop Transmission
-    and then edit the settings.json file.<br>2. Save the file<br>3. Start up Transmission
+    If Tranmission is runnining, the file will change and possibly override your settings.
+    Do the following to make sure your settings are saved. <br>1. Stop Transmission
+    and then edit the settings.json file. <br>2. Save the file <br>3. Start up Transmission
     and your new settings should be updated Hopefully this will help someone else who's
-    had issues.<br><br>I was having permission issues using docker and I think I know
+    had issues. <br><br>I was having permission issues using docker and I think I know
     why.<br>When I installed Transmission from the Synology Package center it renamed
     some of my accounts.<br>I had created a sc-transmission group. The package installer
     renamed it to <b>sc-transmission__PKG_</b><br>Notice it has two underscores __ then
     PKG and then another underscore. __PKG_<br>I bet this is why I was getting permissions
     issues, but who knows, this is a very odd group which Tranmission created. The good
-    news is Transmission works.<br><br>For a bonus you can run the following comand
-    to update the web UI to give you slighly more options.<br><em><b>sudo wget https://github.com/ronggang/transmission-web-control/raw/master/release/install-tr-control.sh
+    news is Transmission works. <br><br>If you want to review the Transmission logs
+    you run this command:<br><em><b>sudo tail -f </b></em><a><em><b>/volume1/@appdata/transmission/transmission.log</b></em></a><br>To
+    make it easier to view the logs try this:<br><em><b>ln -s </b></em><a><em><b>/volume1/@appdata/transmission/transmission.log</b></em></a><em>
+    transmission.log</em><br>then: <em></em>
+    <strong>
+      <br><br>
+    </strong>
+    You could alias it as well by adding it to your .bashrc file and then: source .bashrc,
+    but that's making this slightly more advanced for normal users.<br><br>For a bonus
+    you can run the following command to update the web UI to give you slighly more
+    options.<br><em><b>sudo wget https://github.com/ronggang/transmission-web-control/raw/master/release/install-tr-control.sh
     --no-check-certificate</b></em><br><em><b>sudo bash install-tr-control.sh</b> <br>
     <br>
     </em>You will now have a newer updated UI and if you want to change back you have
